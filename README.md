@@ -1,10 +1,10 @@
-# create-terrform-backend
+# Create Terrform backend S3 and DynamoDB with cloudformation 
 
-Created the infrastructure for a terraform backend to store state files in s3 and dynamoDB
+Created the infrastructure for a terraform backend to store state files in s3 and dynamoDB via Cloudformation.
 
 ## Usage
 
-The script requires that you pass in your own credentials to make this work
+The script requires that you pass in your own AWS credentials to make this work
 
 ### Script parameters
 
@@ -40,9 +40,9 @@ Output Should be look like this
 ```
 Terraform S3 Bucket Arn: arn:aws:s3:::whiteplume-prod-terraform-backend-us-east-1
 Terraform S3 Bucket Name: whiteplume-terraform-backend-us-east-1
-Terraform DynamoDB Table Arn: arn:aws:dynamodb:us-east-1:465743759656:table/terraform-backend.lock
+Terraform DynamoDB Table Arn: arn:aws:dynamodb:us-east-1:XXXX:table/terraform-backend.lock
 Terraform DynamoDB Table Name: terraform-backend.lock
-Terraform KMS ARN: arn:aws:kms:us-east-1:465743759656:key/3908627b-f488-468e-9a71-93fd5c48c2d2
+Terraform KMS ARN: arn:aws:kms:us-east-1:XXXX:key/3908627b-f488-468e-9a71-93fd5c48c2d2
 Terraform backend complete
 ```
 
