@@ -2,6 +2,17 @@
 
 Created the infrastructure for a Terraform backend to store state files in S3 and DynamoDB via CloudFormation.
 
+Table of Contents
+=================
+
+   * [Prerequisites 🛠️](#prerequisites-️)
+   * [Usage 📋](#usage-)
+      * [Script Parameters 🎯](#script-parameters-)
+      * [Usage with an AWS Profile 🔄](#usage-with-an-aws-profile-)
+      * [Usage with AWS environment keys  🔑](#usage-with-aws-environment-keys--)
+   * [Directory Structure 📂](#directory-structure-)
+
+
 ## Prerequisites 🛠️
 
 Before proceeding, make sure you have the following:
@@ -27,7 +38,7 @@ The script requires your AWS credentials to work.
 ### Usage with an AWS Profile 🔄
 
 ```
-AWS_PROFILE=example ./create-terraform-backend.sh -a dev-d us-east-1 -r us-east-2 -o whiteplume
+AWS_PROFILE=example ./create-terraform-backend.sh -a dev-d us-east-1 -r us-east-2 -o test
 ```
 
 ### Usage with AWS environment keys  🔑
@@ -60,3 +71,20 @@ Copy the S3 bucket name and DynamoDB table name to use in your Terraform backend
 
 Ready to Rock!
 Now you're all set to create and manage your Terraform state with confidence! ️
+
+## Directory Structure 📂
+
+  * `create-terraform-backend.sh`: A script to create a Terraform backend with S3 and DynamoDB.
+  * `destination-region.yml`: YAML configuration for the destination AWS region.
+  * `README.md`: This file, providing instructions and details about the project.
+  * `source-region.yml`: YAML configuration for the source AWS region.
+
+```
+├── terraform-modules
+│   ├── terraform-aws-backend
+│   │   ├── create-terraform-backend.sh
+│   │   ├── destination-region.yml
+│   │   ├── README.md
+│   │   └── source-region.yml
+
+```
